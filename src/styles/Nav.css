@@ -1,0 +1,38 @@
+.Nav {
+  width: 180px;
+  padding: 20px;
+}
+
+.Nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+.Nav .logo span {
+  margin-left: 10px;
+}
+
+.Nav .list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.Nav .list ul li {
+  list-style-type: none;
+  margin-left: -40px;
+  width: 100px;
+  transition: 0.3ms;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.Nav .list ul li:hover {
+  color: #fff;
+  background-color: #49BEB7;
+}
+
+.Nav .list h3 {
+  padding-top: 400px;
+  color: gray;
+}

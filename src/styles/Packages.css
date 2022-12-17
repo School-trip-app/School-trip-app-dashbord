@@ -1,0 +1,81 @@
+.main .new-package {
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+.main .new-package .text h1 {
+  font-size: 45px;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+
+.main .new-package .text p {
+  color: grey;
+}
+
+.main .new-package .add-icon {
+  font-size: 60px;
+  cursor: pointer;
+  background-color: #49BEB7;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.main .new-package .add-icon span {
+  padding: 20px;
+  top: -5px;
+  position: relative;
+}
+
+.main .table-packages {
+  margin-top: 100px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.main .table-packages thead tr th {
+  letter-spacing: 2px;
+  border: 1px solid #ddd;
+  font-size: 20px;
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  color: #49BEB7;
+  font-weight: normal;
+}
+
+.main .table-packages tbody tr td {
+  padding: 20px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.main .table-packages tbody tr td .active-button {
+  color: #49BEB7;
+  padding: 20px;
+  border: none;
+  background-color: aliceblue;
+  border-radius: 14px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.main .table-packages tbody tr td .delete-button {
+  margin-left: 20px;
+  color: red;
+  padding: 20px;
+  border: none;
+  background-color: aliceblue;
+  border-radius: 14px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 20px;
+}

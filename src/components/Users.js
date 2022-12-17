@@ -1,0 +1,87 @@
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import '../styles/User.css';
+function Users() {
+  const [users, setUsers] = useState([]);
+  // console.log(`https://sophisticated-steel-production.up.railway.app/${users[2].imageprofile}`)
+  const getUsers = async () => {
+    await axios.get('https://sophisticated-steel-production.up.railway.app/user').then(res => {
+      setUsers(res.data);
+      console.log(res.data);
+    }).catch(error => {
+      console.log(error);
+    });
+  }
+  const handlerActiv = async (id) => {
+    await axios.put(`https://sophisticated-steel-production.up.railway.app/user/${id}`).then(res => {
+      console.log(res);
+      getUsers();
+    }).catch(error => {
+      console.log(error);
+    });
+  };
+  const handlerDelete = async (id) => {
+    await axios.delete(`https://sophisticated-steel-production.up.railway.app/user/${id}`).then(res => {
+      console.log(res.data);
+    }).then(()=>{
+      getUsers();
+    })
+  };
+
+  useEffect(() => {
+    getUsers();
+  }, [])
+  return (
+    <div className='users'>
+      <div className='text'>
+        <h1>Users Info</h1>
+        <p>Lorem ipsum is simply dummy text of the printing and typesetting</p>
+      </div>
+      <table >
+        <thead >
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>UserRole</th>
+            <th>Phonenumber</th>
+            <th>Gender</th>
+            <th>Status</th>
+            <th>Make Active / Delete User</th>
+          </tr>
+        </thead>
+        {users && users.map((user) => {
+          return <tbody key={user.id}>
+            <tr>
+              <td style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src={user.imageprofile.includes('https') ? user.imageprofile : `https://sophisticated-steel-production.up.railway.app/${user?.imageprofile}`} alt='img' style={{ width: '70px', borderRadius: '50%' }} />
+                <h5 style={{ marginLeft: '10px' }}>{user.username}</h5>
+              </td>
+              <td>
+                {user.email}
+              </td>
+              <td>
+                {user.userRole}
+              </td>
+              <td>
+                {user.phonenumber}
+              </td>
+              <td>
+                {user.gender}
+              </td>
+              <td>
+                {user.capabilities.includes("canBookTrip") ? "Active" : "Hold"}
+              </td>
+              <td>
+                {user.capabilities.includes("canBookTrip") ? '' : <button className='active-button' onClick={() => handlerActiv(user.id)}>Active User</button>}
+                <button className='delete-button' onClick={() => handlerDelete(user.id)}>Delete User</button>
+
+              </td>
+            </tr>
+          </tbody>
+        })}
+      </table>
+    </div>
+  )
+}
+
+export default Users
