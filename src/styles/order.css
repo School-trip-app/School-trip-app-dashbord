@@ -1,0 +1,22 @@
+.order{
+    display: flex;
+}
+.order h1{
+    text-align: center;
+    letter-spacing: 2px;
+    padding-top: 30px;
+    font-size: 40px;
+    font-weight: normal;
+    color: #49BEB7;
+}
+.order p{
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 20px;
+
+}
+li{
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
