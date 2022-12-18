@@ -1,21 +1,35 @@
+.text-title {
+  text-align: center;
+  color: rgb(0, 9, 94);
+  font-size: 40px;
+  margin-bottom: 35px;
+  position: relative;
+  max-width: fit-content;
+  /* border-bottom: 6px rgb(0, 9, 94) solid; */
+}
+
+
 .users table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
   text-align: center;
+  outline: 3px rgb(0, 9, 94) solid;
+  z-index: 10;
+  box-shadow: 2px 3px 05px black;
+
 }
 
 .users table thead tr th {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
-  letter-spacing: 2px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  letter-spacing: 1px;
   text-align: center;
-  background-color: #04AA6D;
-  color: white;
-  border: 1px solid #ddd;
-  padding: 8px;
+  background: #e2e2f7bc;
+  color: rgb(0, 9, 94);
+  border: 2px solid #ddd;
+  padding: 25px 8px;
+  border-bottom: 3px rgb(0, 9, 94) solid;
 }
 
 .users table tbody {
@@ -27,35 +41,50 @@
   font-size: 20px;
   border: 1px solid #ddd;
   padding: 8px;
+  min-height: 150px;
 }
 
-.users table tbody tr td .active-button {
-  color: #49BEB7;
-  padding: 20px;
-  border: none;
-  background-color: aliceblue;
-  border-radius: 14px;
-  cursor: pointer;
-  letter-spacing: 2px;
-  font-size: 20px;
+.users table tbody tr:hover {
+  background-color: rgba(133, 133, 133, 0.178);
+  color: rgb(0, 9, 94);
 }
 
+.users table tbody tr td .active-button,
 .users table tbody tr td .delete-button {
-  margin-left: 20px;
-  color: red;
-  padding: 20px;
+  color: rgb(0, 9, 94);
+  padding: 10px;
   border: none;
-  background-color: aliceblue;
-  border-radius: 14px;
+  width: 80%;
+  background-color: #e2e2f7bc;
+  border-radius: 10px;
   cursor: pointer;
   letter-spacing: 2px;
   font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  box-shadow: 2px 2px 3px black;
 }
 
-.users table tbody tr :nth-child(even) {
-  background-color: #f2f2f2;
+.users table tbody tr td .delete-button:hover {
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  background-color: rgb(191, 2, 2);
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 20px;
+  transition-duration: 500ms;
 }
 
-.users table tbody tr :hover {
-  background-color: #ddd;
+.users table tbody tr td .active-button:hover {
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  background-color: rgb(0, 9, 94);
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 20px;
+  transition-duration: 500ms;
 }
