@@ -44,29 +44,6 @@ function Addpackage() {
     <div style={{ display: 'flex' }}>
       <Nav />
       <div className='main'>
-        <div className='calender'>
-          <input type='text' placeholder='Search' style={{ width: '300px' }} />
-          <select>
-            <option>20 012020- 24-02.2020</option>
-          </select>
-          <ul>
-            <li>
-              <SearchIcon />
-            </li>
-            <li>
-              <ManIcon />
-            </li>
-            <li>
-              <FlightIcon />
-            </li>
-            <li>
-              <BedroomChildIcon />
-            </li>
-            <li>
-              <BatteryChargingFullIcon />
-            </li>
-          </ul>
-        </div>
         <div className='form-package' >
           <h1 style={{ textAlign: 'center' }}>Add New Package</h1>
           <div className='form-signup' style={{ paddingTop: '0px', position: 'relative', top: '-150px' }} >

@@ -11,85 +11,59 @@ import { addphotographerAsync, getphotographerAsync } from "../store/Photographe
 
 
 function Photographers() {
-    const dispatch = useDispatch();
-    const add = (e) => {
-        e.preventDefault();
+  const dispatch = useDispatch();
+  const add = (e) => {
+    e.preventDefault();
 
-        dispatch(addphotographerAsync({
-            name: e.target.name.value,
-            image: e.target.image.value,
-            price: e.target.price.value,
-            phoneNumber: e.target.phoneNumber.value,
-            rate: e.target.rate.value,
-            email: e.target.email.value
-        }
-        ));
-        e.target.reset();
+    dispatch(addphotographerAsync({
+      name: e.target.name.value,
+      image: e.target.image.value,
+      price: e.target.price.value,
+      phoneNumber: e.target.phoneNumber.value,
+      rate: e.target.rate.value,
+      email: e.target.email.value
+    }
+    ));
+    e.target.reset();
 
-    };
+  };
 
-    useEffect(() => {
-        dispatch(getphotographerAsync());
-    }, [dispatch]);
+  useEffect(() => {
+    dispatch(getphotographerAsync());
+  }, [dispatch]);
 
 
-    return (
-        <div className='photographers'>
-            <Nav />
-            <div className='main'>
-                <div className='calender'>
-                    <input type='text' placeholder='Search' style={{ width: '300px' }} />
-                    <select>
-                        <option>20 012020- 24-02.2020</option>
-                    </select>
-                    <ul>
-                        <li>
-                            <SearchIcon />
-                        </li>
-                        <li>
-                            <ManIcon />
-                        </li>
-                        <li>
-                            <FlightIcon />
-                        </li>
-                        <li>
-                            <BedroomChildIcon />
-                        </li>
-                        <li>
-                            <BatteryChargingFullIcon />
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <section className='top-background-photographer'>
-                        <p>Photographers </p>
-                    </section>
-                    <h1>Add Photographers</h1>
-                    <form className='formpho' onSubmit={(e) => { add(e) }}>
+  return (
+    <div className='photographers'>
+      <Nav />
+      <div className='main'>
+        <div>
+          <h1>Add Photographers</h1>
+          <form className='formpho' onSubmit={(e) => { add(e) }}>
 
-                        <div className='col-1'>
-                            <input className='inputpho' type="text" name="name" placeholder='Name of Photographer :' />
-                            <input className='inputpho' type="number" name="phoneNumber" placeholder='PhoneNumber of Photographer :' />
-                            <input className='inputpho' type="text" name="email" placeholder='Email of Photographer :' />
-                        </div>
+            <div className='col-1'>
+              <input className='inputpho' type="text" name="name" placeholder='Name of Photographer :' />
+              <input className='inputpho' type="number" name="phoneNumber" placeholder='PhoneNumber of Photographer :' />
+              <input className='inputpho' type="text" name="email" placeholder='Email of Photographer :' />
+            </div>
 
-                        <div className='col-2'>
+            <div className='col-2'>
 
-                            <input className='inputpho' type="number" name="price" placeholder='price :' />
-                            <input className='inputpho' type="text" name="image" placeholder='image link of Photographer :' />
-                            <input className='inputpho' type="number" name="rate" placeholder='rate of Photographer :' />
-                            <input className='submitpho' type="submit" value="Submit" />
-
-                        </div>
-
-                    </form>
-                    <div>
-                    </div>
-                </div>
+              <input className='inputpho' type="number" name="price" placeholder='price :' />
+              <input className='inputpho' type="text" name="image" placeholder='image link of Photographer :' />
+              <input className='inputpho' type="number" name="rate" placeholder='rate of Photographer :' />
+              <input className='submitpho' type="submit" value="Submit" />
 
             </div>
+
+          </form>
+          <div>
+          </div>
         </div>
-    )
+
+      </div>
+    </div>
+  )
 }
 
 export default Photographers

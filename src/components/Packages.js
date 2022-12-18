@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Packages.css';
 import Nav from './Nav';
-import SearchIcon from '@mui/icons-material/Search';
-import ManIcon from '@mui/icons-material/Man';
-import FlightIcon from '@mui/icons-material/Flight';
-import BedroomChildIcon from '@mui/icons-material/BedroomChild';
-import BatteryChargingFullIcon from '@mui/icons-material/BatteryChargingFull';
+import SumIcon from '@mui/icons-material/Man';
+
 import '../styles/Main.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -37,33 +34,9 @@ function Packages() {
     <div className='packages' style={{ display: 'flex' }}>
       <Nav />
       <div className='main'>
-        <div className='calender'>
-          <input type='text' placeholder='Search' style={{ width: '300px' }} />
-          <select>
-            <option>20 012020- 24-02.2020</option>
-          </select>
-          <ul>
-            <li>
-              <SearchIcon />
-            </li>
-            <li>
-              <ManIcon />
-            </li>
-            <li>
-              <FlightIcon />
-            </li>
-            <li>
-              <BedroomChildIcon />
-            </li>
-            <li>
-              <BatteryChargingFullIcon />
-            </li>
-          </ul>
-        </div>
         <div className='new-package'>
           <div className='text'>
-            <h1>Add New Package</h1>
-            <p>Lorem ipsum is simply dummy text of printing and typesetting</p>
+            <h1>Create New Package</h1>
           </div>
           <div className='add-icon'>
             <Link to='/addpackage'><span>+</span></Link>
@@ -80,7 +53,7 @@ function Packages() {
                 <th>startingTime - endingTime</th>
                 <th>price</th>
                 <th>rate</th>
-                <th>Edit Package / Delete Package</th>
+                <th>Edit / Delete Package</th>
               </tr>
             </thead>
             {packages && packages.map((pack) => {
