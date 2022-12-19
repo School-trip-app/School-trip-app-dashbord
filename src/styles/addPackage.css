@@ -1,0 +1,41 @@
+* {
+  color: #1a2d6d;
+  font-family: "josefin sans", sans-serif;
+}
+
+.submit-button-addpackage {
+  padding: 15px;
+  background-color: rgb(255, 200, 0);
+  color: #1a2d6d;
+  font-family: "josefin sans", sans-serif;
+  margin-top: 40px;
+  margin-left: 12px;
+  width: 100%;
+  font-size: large;
+}
+
+.submit-button-addpackage:hover {
+  background-color: #1a2d6d;
+  color: rgb(255, 200, 0);
+  font-family: "josefin sans", sans-serif;
+  font-size: large;
+}
+
+.form-1 input,
+.form-2 input {
+  padding: 25px;
+  background: linear-gradient(135deg, #e3e3e3 0%, #ffffff 100%);
+  border: none;
+  border-radius: 0px;
+  border-left: 5px solid #1a2d6d;
+  color: #1a2d6d;
+  font-size: large;
+  margin: 10px 10px 35px 10px;
+
+}
+
+.form-1 label,
+.form-2 label {
+  padding-left: 15px;
+  margin-bottom: -100px;
+}

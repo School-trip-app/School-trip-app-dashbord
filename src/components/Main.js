@@ -18,20 +18,20 @@ function Main() {
       <p className='text-title'>Overall state</p>
       <div className='statistical'>
         <div className='statistical-box'>
-          <h1>25K</h1>
-          <p>Packages travel</p>
+          <h1 style={{ color: 'white' }}>25K</h1>
+          <p style={{ color: 'white' }}>Packages travel</p>
         </div>
         <div className='statistical-box'>
-          <h1>220</h1>
-          <p>Completed travel</p>
+          <h1 style={{ color: 'white' }}>220</h1>
+          <p style={{ color: 'white' }}>Completed travel</p>
         </div>
         <div className='statistical-box'>
-          <h1>100</h1>
-          <p>Active User</p>
+          <h1 style={{ color: 'white' }}>100</h1>
+          <p style={{ color: 'white' }}>Active User</p>
         </div>
         <div className='statistical-box'>
-          <h1>20</h1>
-          <p>photographers</p>
+          <h1 style={{ color: 'white' }}>20</h1>
+          <p style={{ color: 'white' }}>photographers</p>
         </div>
       </div>
       <Users />
