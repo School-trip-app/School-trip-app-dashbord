@@ -50,7 +50,7 @@ html {
 .productCard {
   position: relative;
   background-color: var(--color-grey-primary);
-  margin: 1rem;
+  padding: 10px;
   flex: 1 0 25rem;
   transition: 0.2s;
 }
@@ -155,30 +155,25 @@ html {
   cursor: pointer;
 }
 
-.main {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-
 .main h1 {
   font-size: 45px;
   font-weight: normal;
   letter-spacing: 3px;
   color: rgb(0, 9, 94);
   margin-top: 50px;
+  text-align: center;
 }
 
 .inputproduct {
-  padding: 25px;
+  padding: 25px 10px;
   background: linear-gradient(135deg, #e3e3e3 0%, #ffffff 100%);
+  border: none;
   border-left: 5px solid #1a2d6d;
-  border-top: none;
-  border-right: none;
   border-radius: 0px;
   color: #1a2d6d;
   font-size: large;
   margin: 15px 0px;
+  width: 100%;
 }
 
 .inputproduct-select {
