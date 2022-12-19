@@ -10,7 +10,7 @@ function Packages() {
   const [packages, setPackages] = useState([]);
 
   const getPackages = async () => {
-    await axios.get('http://localhost:4001/package').then(res => {
+    await axios.get(`https://sophisticated-steel-production.up.railway.app/package`).then(res => {
       setPackages(res.data);
       console.log(res.data)
     }).catch(error => {

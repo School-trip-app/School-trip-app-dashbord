@@ -40,27 +40,21 @@ function Photographers() {
         <div>
           <h1>Add Photographers</h1>
           <form className='formpho' onSubmit={(e) => { add(e) }}>
-
             <div className='col-1'>
               <input className='inputpho' type="text" name="name" placeholder='Name of Photographer :' />
               <input className='inputpho' type="number" name="phoneNumber" placeholder='PhoneNumber of Photographer :' />
               <input className='inputpho' type="text" name="email" placeholder='Email of Photographer :' />
             </div>
-
             <div className='col-2'>
-
               <input className='inputpho' type="number" name="price" placeholder='price :' />
               <input className='inputpho' type="text" name="image" placeholder='image link of Photographer :' />
               <input className='inputpho' type="number" name="rate" placeholder='rate of Photographer :' />
               <input className='submitpho' type="submit" value="Submit" />
-
             </div>
-
           </form>
           <div>
           </div>
         </div>
-
       </div>
     </div>
   )

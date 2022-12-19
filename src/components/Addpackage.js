@@ -30,7 +30,7 @@ function Addpackage() {
         ratePoints:e.target.rate.value
       }
       console.log(infoPacakge)
-      await axios.post(`http://localhost:4001/package`, infoPacakge).then(res => {
+      await axios.post(`https://sophisticated-steel-production.up.railway.app/package`, infoPacakge).then(res => {
         setPackages(res.data);
         console.log(packages);
       }).catch(error => {

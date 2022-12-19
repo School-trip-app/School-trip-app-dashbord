@@ -1,22 +1,22 @@
 .order {
-    display: flex;
+  display: flex;
 }
 
 .order h1 {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    color: rgb(0, 9, 94);
-    margin-bottom: 65px;
-    font-size: 45px;
-    margin-bottom: -10px;
-    text-align: center;
-    padding: 45px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: rgb(0, 9, 94);
+  margin-bottom: 65px;
+  font-size: 45px;
+  margin-bottom: -10px;
+  text-align: center;
+  padding: 45px 0px;
 }
 
 
 li {
-    list-style-type: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  list-style-type: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
