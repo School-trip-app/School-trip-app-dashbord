@@ -28,7 +28,6 @@
 
 .inputpho {
   padding: 25px;
-  /* border-bottom: 3px solid #1a2d6d; */
   background: linear-gradient(135deg, #e3e3e3 0%, #ffffff 100%);
   border-left: 5px solid #1a2d6d;
   border-top: none;
@@ -36,15 +35,14 @@
   border-radius: 0px;
   color: #1a2d6d;
   font-size: large;
-  margin: 25px 0px;
+  margin: 15px 0px;
 }
 
 .submitpho {
-  padding: 25px;
+  padding: 15px;
   background-color: rgb(255, 200, 0);
   color: #1a2d6d;
   font-size: x-large;
-  margin: 25px 0px;
 }
 
 .submitpho:hover {
