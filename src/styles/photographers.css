@@ -1,129 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
 
-.photographers{
-    display: flex;
-}
-
 * {
   box-sizing: border-box;
   font-family: "josefin sans", sans-serif;
 }
 
-.photographers .container {
-  width: 100%;
-  margin: auto;
-  padding: 0 20px;
-}
-
-.photographers .h1-sb {
-
-  line-height: 60px;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.photographers .Cards {
+.photographers {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+
+.photographer-form-div {
+  padding: 50px 35px;
+  display: flex;
   align-items: center;
-}
-
-.photographers .Card {
-  flex: 0 0;
-
-  width: 100%;
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #fff;
-}
-
-.photographers .btn-book-sb {
-  border: none;
-  outline: none;
-  background: #000;
-  color: #fff;
-  border-radius: 10px;
-  max-width: 120px;
-  width: 100%;
-  height: 40px;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 1px solid #000;
+  flex-flow: column wrap;
+  width: 2000px;
 }
 
-.photographers .btn-book-sb:hover {
-  background: #fff;
-  color: #000;
-}
-
-.photographers .icon-div {
-  width: 30%;
-  padding-top: 50px;
+.photographer-form-div-header {
+  font-size: 45px;
+  font-weight: normal;
+  letter-spacing: 3px;
   color: rgb(0, 9, 94);
 }
 
-.icon {
-  font-size: 2.5rem;
+.inputpho {
+  padding: 25px;
+  /* border-bottom: 3px solid #1a2d6d; */
+  background: linear-gradient(135deg, #e3e3e3 0%, #ffffff 100%);
+  border-left: 5px solid #1a2d6d;
+  border-top: none;
+  border-right: none;
+  border-radius: 0px;
+  color: #1a2d6d;
+  font-size: large;
+  margin: 25px 0px;
 }
 
-.icon-title {
-  display: flex;
+.submitpho {
+  padding: 25px;
+  background-color: rgb(255, 200, 0);
+  color: #1a2d6d;
+  font-size: x-large;
+  margin: 25px 0px;
 }
 
-.icon-title p {
-  margin: 3px 0px 0px 15px;
-}
-
-.icon-type {
-  margin: 0px 0px 30px 0px;
-}
-.photographers h1{
-    text-align: center;
-    padding-top: 20px;
-}
-.photographers .inputpho{
-    width: 600px;
-    font-size: 20px;
-    outline: none;
-    border-radius: 10px;
-    transition: 1s;
-    padding: 15px;
-    display: block;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
-}
-.photographers .formpho{
-    position: relative;
-    left: 35%; 
-    padding-top: 30px;
-}
-.photographers .submitpho{
-    width: 600px;
-    transition: 1s;
-    font-size: 20px;
-    background-color: transparent;
-    padding: 15px;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
-}
-.submitpho:hover{
-    background-color: #49BEB7;
-    color: #fff;
+.submitpho:hover {
+  background-color: #1a2d6d;
+  color: rgb(255, 200, 0);
+  font-size: x-large
 }

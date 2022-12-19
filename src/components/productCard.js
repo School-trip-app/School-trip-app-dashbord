@@ -12,7 +12,6 @@ function ProductCard(props) {
           <FaShoppingCart className={"productCard_cart"} />
           <FaRegBookmark className={"productCard_wishlist"} />
           <FaFireAlt className={"productCard_fastSelling"} />
-
           <div className='productCard_content'>
             <h3 className='productName'>{props.name}</h3>
             <div className='displayStack_1'>
@@ -30,7 +29,6 @@ function ProductCard(props) {
           </div>
         </div>
       </div>
-
     </>
   )
 }

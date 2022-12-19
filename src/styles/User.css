@@ -40,8 +40,8 @@
   letter-spacing: 1px;
   font-size: 20px;
   border: 1px solid #ddd;
-  padding: 8px;
-  min-height: 150px;
+  padding: 3px;
+  min-height: 200px;
 }
 
 .users table tbody tr:hover {
@@ -54,7 +54,7 @@
   color: rgb(0, 9, 94);
   padding: 10px;
   border: none;
-  width: 80%;
+  width: 30%;
   background-color: #e2e2f7bc;
   border-radius: 10px;
   cursor: pointer;
@@ -62,7 +62,7 @@
   font-size: 20px;
   margin-bottom: 10px;
   margin-top: 10px;
-  box-shadow: 2px 2px 3px black;
+  box-shadow: none !important;
 }
 
 .users table tbody tr td .delete-button:hover {
