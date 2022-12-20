@@ -73,7 +73,7 @@ function Users() {
                 <a href={`https://sophisticated-steel-production.up.railway.app/${user?.image}`} rel='noreferrer' target='_blank'><FaImage /></a>
               </td>
               <td>
-                {user.capabilities.includes("canBookTrip") ? '' : <button className='active-button' onClick={() => handlerActiv(user.id)}>Verify User</button>}
+                {!user.capabilities.includes("canBookTrip") && user.userRole === 'school' ? <button className='active-button' onClick={() => handlerActiv(user.id)}>Verify User</button> : ''}
                 <button className='delete-button' onClick={() => handlerDelete(user.id)}>Delete User</button>
               </td>
             </tr>
