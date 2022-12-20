@@ -1,6 +1,5 @@
 import React from 'react'
 import '../styles/Main.css';
-import trip from '../images/tr.png';
 import Users from './Users';
 
 

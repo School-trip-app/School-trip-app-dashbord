@@ -1,19 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Nav from './Nav';
 import '../styles/order.css';
-import SearchIcon from '@mui/icons-material/Search';
-import ManIcon from '@mui/icons-material/Man';
-import FlightIcon from '@mui/icons-material/Flight';
-import BedroomChildIcon from '@mui/icons-material/BedroomChild';
-import BatteryChargingFullIcon from '@mui/icons-material/BatteryChargingFull';
 import axios from 'axios';
 function Orders() {
   let [orders, setOrders] = useState([]);
   const handlerOrder = async () => {
     await axios.get('https://sophisticated-steel-production.up.railway.app/user').then((res) => {
       setOrders(res.data);
-      console.log(res.data);
-      console.log(orders.tripRequests)
     }).catch(err => console.log(err));
 
   }
@@ -25,9 +18,7 @@ function Orders() {
     <div className='order'>
       <Nav />
       <div className='main'>
-        <div className='text-orders'>
-          <h1>Special Orders Requests </h1>
-        </div>
+        <h1>Special Orders Requests </h1>
         <div className='users'>
           <table >
             <thead >

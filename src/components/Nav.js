@@ -26,8 +26,12 @@ function Nav({ setLogin }) {
             Packages
           </li>
           </Link>
+          <Link to='/packages-orders'><li>
+            Trips Orders
+          </li>
+          </Link>
           <Link to='/orders'><li>
-            Orders
+            Special Orders
           </li>
           </Link>
           <Link to='/photographers'>
