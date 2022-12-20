@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import '../styles/User.css';
+import { FaImage } from 'react-icons/fa'
 
 
 
@@ -44,8 +45,8 @@ function Users() {
             <th>Email</th>
             <th>UserRole</th>
             <th>Phonenumber</th>
-            <th>Gender</th>
             <th>Status</th>
+            <th>School Documents</th>
             <th>Verify / Delete User</th>
           </tr>
         </thead>
@@ -66,10 +67,10 @@ function Users() {
                 {user.phonenumber}
               </td>
               <td>
-                {user.gender}
+                {user.capabilities.includes("canBookTrip") ? "Active" : "Hold"}
               </td>
               <td>
-                {user.capabilities.includes("canBookTrip") ? "Active" : "Hold"}
+                <a href={`https://sophisticated-steel-production.up.railway.app/${user?.image}`} rel='noreferrer' target='_blank'><FaImage /></a>
               </td>
               <td>
                 {user.capabilities.includes("canBookTrip") ? '' : <button className='active-button' onClick={() => handlerActiv(user.id)}>Verify User</button>}
@@ -79,7 +80,7 @@ function Users() {
           </tbody>
         })}
       </table>
-    </div>
+    </div >
   )
 }
 
