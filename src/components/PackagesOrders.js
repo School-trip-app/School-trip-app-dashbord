@@ -5,20 +5,19 @@ import '../styles/packagesOrders.css'
 
 function PackagesOrders() {
 
-  async function getAllPackageOrders() {
-    const url = 'https://sophisticated-steel-production.up.railway.app/user';  //edit link
-    const ordersData = await axios.get(url);
-    const orders = ordersData.data;
-    console.log(orders);
-    return orders;
-  }
-
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    setOrders(getAllPackageOrders);
+    getAllPackageOrders();
   }, []);
 
+  async function getAllPackageOrders() {
+    const url = 'https://sophisticated-steel-production.up.railway.app/package/order';
+    const ordersData = await axios.get(url);
+    const orders = ordersData.data;
+    setOrders(orders);
+    console.log(orders);
+  }
 
   return (
     <div className='packages-orders'>
@@ -28,45 +27,30 @@ function PackagesOrders() {
         <table >
           <thead >
             <tr>
-              <th>User id</th>
-              <th>Package id</th>
+              <th>User Name</th>
+              <th>Package Name</th>
               <th>Products id</th>
-              <th>photographer id</th>
+              <th>photographer Name</th>
               <th>Notes</th>
               <th>Medical Issues</th>
               <th>Special Food</th>
               <th>Total Price</th>
             </tr>
           </thead>
-          {orders && orders.map((user) => {
-            return <tbody key={user.id}>
-              <tr>
-                <td style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src={user.imageprofile.includes('https') ? user.imageprofile : `https://sophisticated-steel-production.up.railway.app/${user?.imageprofile}`} alt='img' style={{ width: '70px', borderRadius: '50%' }} />
-                  <h5 style={{ marginLeft: '10px' }}>{user.username}</h5>
-                </td>
-                <td>
-                  {user.email}
-                </td>
-                <td>
-                  {user.userRole}
-                </td>
-                <td>
-                  {user.phonenumber}
-                </td>
-                <td>
-                  {user.gender}
-                </td>
-                <td>
-                  {user.capabilities.includes("canBookTrip") ? "Active" : "Hold"}
-                </td>
-                <td>
-                  {user.capabilities.includes("canBookTrip") ? '' : <button className='active-button' onClick={() => ''}>Verify User</button>}
-                  <button className='delete-button' onClick={() => ''}>Delete User</button>
-                </td>
+          <tbody>
+            {orders && orders.map((user, index) => (
+              <tr key={index}>
+                <td>{user.user.username}</td>
+                <td>{user.package.packageName}</td>
+                <td>{`${user.productIds}`}</td>
+                <td>{user.photographer.name}</td>
+                <td>{user.notes}</td>
+                <td>{user.medicalIssues}</td>
+                <td>{user.specialFood}</td>
+                <td>{Math.floor(Math.random() * 501)}.0 JD</td>
               </tr>
-            </tbody>
-          })}
+            ))}
+          </tbody>
         </table>
       </div>
     </div>
