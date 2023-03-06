@@ -1,15 +1,25 @@
-.text-title {
-  text-align: center;
-  color: rgb(0, 9, 94);
-  font-size: 40px;
-  margin-bottom: 35px;
-  position: relative;
-  max-width: fit-content;
-  /* border-bottom: 6px rgb(0, 9, 94) solid; */
+.packages-orders {
+  display: flex;
+  min-height: 650px;
+
 }
 
+.packages-orders-content {
+  padding: 55px 30px;
+  max-width: 1319px;
+  min-width: 1319px;
+}
 
-.users table {
+.packages-orders-content h1 {
+  margin-top: 75px;
+  font-size: 45px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: rgb(0, 9, 94);
+}
+
+.packages-orders-content table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
@@ -20,7 +30,7 @@
 
 }
 
-.users table thead tr th {
+.packages-orders-content table thead tr th {
   font-size: 18px;
   font-weight: normal;
   letter-spacing: 1px;
@@ -32,11 +42,11 @@
   border-bottom: 3px rgb(0, 9, 94) solid;
 }
 
-.users table tbody {
+.packages-orders-content table tbody {
   position: relative;
 }
 
-.users table tbody tr td {
+.packages-orders-content table tbody tr td {
   letter-spacing: 1px;
   font-size: 20px;
   border: 1px solid #ddd;
@@ -44,13 +54,13 @@
   min-height: 200px;
 }
 
-.users table tbody tr:hover {
+.packages-orders-content table tbody tr:hover {
   background-color: rgba(133, 133, 133, 0.178);
   color: rgb(0, 9, 94);
 }
 
-.users table tbody tr td .active-button,
-.users table tbody tr td .delete-button {
+.packages-orders-content table tbody tr td .active-button,
+.packages-orders-content table tbody tr td .delete-button {
   color: rgb(0, 9, 94);
   padding: 10px;
   border: none;
@@ -65,7 +75,7 @@
   box-shadow: none !important;
 }
 
-.users table tbody tr td .delete-button:hover {
+.packages-orders-content table tbody tr td .delete-button:hover {
   color: #ffffff;
   padding: 10px;
   border: none;
@@ -77,7 +87,7 @@
   transition-duration: 500ms;
 }
 
-.users table tbody tr td .active-button:hover {
+.packages-orders-content table tbody tr td .active-button:hover {
   color: #ffffff;
   padding: 10px;
   border: none;

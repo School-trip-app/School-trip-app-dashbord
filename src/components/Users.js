@@ -1,11 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import '../styles/User.css';
+import { FaImage } from 'react-icons/fa'
+
+
+
 function Users() {
   const [users, setUsers] = useState([]);
-  // console.log(`https://sophisticated-steel-production.up.railway.app/${users[2].imageprofile}`)
   const getUsers = async () => {
-    await axios.get('https://sophisticated-steel-production.up.railway.app/user').then(res => {
+    await axios.get('http://localhost:4005/user').then(res => {
       setUsers(res.data);
       console.log(res.data);
     }).catch(error => {
@@ -13,7 +16,7 @@ function Users() {
     });
   }
   const handlerActiv = async (id) => {
-    await axios.put(`https://sophisticated-steel-production.up.railway.app/user/${id}`).then(res => {
+    await axios.put(`http://localhost:4005/user/${id}`).then(res => {
       console.log(res);
       getUsers();
     }).catch(error => {
@@ -21,21 +24,19 @@ function Users() {
     });
   };
   const handlerDelete = async (id) => {
-    await axios.delete(`https://sophisticated-steel-production.up.railway.app/user/${id}`).then(res => {
+    await axios.delete(`http://localhost:4005/user/${id}`).then(res => {
       console.log(res.data);
-    }).then(()=>{
+    }).then(() => {
       getUsers();
     })
   };
-
   useEffect(() => {
     getUsers();
   }, [])
   return (
     <div className='users'>
       <div className='text'>
-        <h1>Users Info</h1>
-        <p>Lorem ipsum is simply dummy text of the printing and typesetting</p>
+        <h1 className='text-title'>Users Information</h1>
       </div>
       <table >
         <thead >
@@ -44,16 +45,16 @@ function Users() {
             <th>Email</th>
             <th>UserRole</th>
             <th>Phonenumber</th>
-            <th>Gender</th>
             <th>Status</th>
-            <th>Make Active / Delete User</th>
+            <th>School Documents</th>
+            <th>Verify / Delete User</th>
           </tr>
         </thead>
         {users && users.map((user) => {
           return <tbody key={user.id}>
             <tr>
               <td style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <img src={user.imageprofile.includes('https') ? user.imageprofile : `https://sophisticated-steel-production.up.railway.app/${user?.imageprofile}`} alt='img' style={{ width: '70px', borderRadius: '50%' }} />
+                <img src={user.imageprofile.includes('https') ? user.imageprofile : `http://localhost:4005/${user?.imageprofile}`} alt='img' style={{ width: '70px', borderRadius: '50%' }} />
                 <h5 style={{ marginLeft: '10px' }}>{user.username}</h5>
               </td>
               <td>
@@ -66,21 +67,20 @@ function Users() {
                 {user.phonenumber}
               </td>
               <td>
-                {user.gender}
-              </td>
-              <td>
                 {user.capabilities.includes("canBookTrip") ? "Active" : "Hold"}
               </td>
               <td>
-                {user.capabilities.includes("canBookTrip") ? '' : <button className='active-button' onClick={() => handlerActiv(user.id)}>Active User</button>}
+                <a href={`http://localhost:4005/${user?.image}`} rel='noreferrer' target='_blank'><FaImage /></a>
+              </td>
+              <td>
+                {!user.capabilities.includes("canBookTrip") && user.userRole === 'school' ? <button className='active-button' onClick={() => handlerActiv(user.id)}>Verify User</button> : ''}
                 <button className='delete-button' onClick={() => handlerDelete(user.id)}>Delete User</button>
-
               </td>
             </tr>
           </tbody>
         })}
       </table>
-    </div>
+    </div >
   )
 }
 

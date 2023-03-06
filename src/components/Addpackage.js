@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import Nav from './Nav'
-import SearchIcon from '@mui/icons-material/Search';
-import ManIcon from '@mui/icons-material/Man';
-import FlightIcon from '@mui/icons-material/Flight';
-import BedroomChildIcon from '@mui/icons-material/BedroomChild';
-import BatteryChargingFullIcon from '@mui/icons-material/BatteryChargingFull';
 import axios from 'axios';
+import '../styles/addPackage.css';
 
 
 function Addpackage() {
@@ -27,10 +23,10 @@ function Addpackage() {
         pickUpPoint: e.target.pickUpPoint.value,
         dropPoint: e.target.dropPoint.value,
         rate: e.target.rate.value,
-        ratePoints:e.target.rate.value
+        ratePoints: e.target.rate.value
       }
       console.log(infoPacakge)
-      await axios.post(`http://localhost:4001/package`, infoPacakge).then(res => {
+      await axios.post(`http://localhost:4005/package`, infoPacakge).then(res => {
         setPackages(res.data);
         console.log(packages);
       }).catch(error => {
@@ -44,29 +40,6 @@ function Addpackage() {
     <div style={{ display: 'flex' }}>
       <Nav />
       <div className='main'>
-        <div className='calender'>
-          <input type='text' placeholder='Search' style={{ width: '300px' }} />
-          <select>
-            <option>20 012020- 24-02.2020</option>
-          </select>
-          <ul>
-            <li>
-              <SearchIcon />
-            </li>
-            <li>
-              <ManIcon />
-            </li>
-            <li>
-              <FlightIcon />
-            </li>
-            <li>
-              <BedroomChildIcon />
-            </li>
-            <li>
-              <BatteryChargingFullIcon />
-            </li>
-          </ul>
-        </div>
         <div className='form-package' >
           <h1 style={{ textAlign: 'center' }}>Add New Package</h1>
           <div className='form-signup' style={{ paddingTop: '0px', position: 'relative', top: '-150px' }} >
@@ -74,33 +47,33 @@ function Addpackage() {
               <div className='form-1'>
                 <label>Package Name</label>
                 <input type='text' id='packageName' data-testid='Name-input' />
-                <label>city</label>
+                <label>City</label>
                 <input type='text' id='city' data-testid='password-input' />
-                <label>locationName</label>
+                <label>Location Name</label>
                 <input type='text' id='locationName' />
-                <label>packageDiscription</label>
+                <label>Package Description</label>
                 <input type='text' id='packageDiscription' />
-                <label>numberOfPeople</label>
+                <label>Number Of People</label>
                 <input type='number' id='numberOfPeople' />
-                <label>tripDate</label>
+                <label>Trip Date</label>
                 <input type='text' id='tripDate' />
-                <label>meals</label>
+                <label>Meals</label>
                 <input type='text' id='meals' />
               </div>
               <div className='form-2' style={{ marginLeft: '50px' }}>
-              <label>startingTime</label>
+                <label>Starting Time</label>
                 <input type='text' id='startingTime' />
-                <label>endingTime</label>
+                <label>Ending Time</label>
                 <input type='text' id='endingTime' />
-                <label>price</label>
+                <label>Price</label>
                 <input type='number' id='price' />
-                <label>pickUpPoint</label>
+                <label>Pick-up Point</label>
                 <input type='text' id='pickUpPoint' />
-                <label>dropPoint</label>
+                <label>Drop Point</label>
                 <input type='text' id='dropPoint' />
-                <label>rate</label>
+                <label>Rate</label>
                 <input type='number' id='rate' />
-                <button type='submit'>Submit</button>
+                <button type='submit' className='submit-button-addpackage'>Submit</button>
               </div>
             </form>
           </div>

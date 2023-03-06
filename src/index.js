@@ -11,22 +11,24 @@ import Addpackage from './components/Addpackage';
 import Photographers from './components/Photographers';
 import { Provider } from 'react-redux';
 import store from './store/store';
-import  Products from '../src/components/Products';
+import Products from '../src/components/Products';
+import PackagesOrders from './components/PackagesOrders';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-  <Router>
-    <Routes>
-    <Route path='/addpackage' element={<Addpackage />} />
-      <Route path='/' element={<App />} />
-      <Route path='/packages' element={<Packages />}>
-      </Route>
-      <Route path='/orders' element={<Orders />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/photographers' element={<Photographers/>}/>
-      <Route path='/products' element={<Products/>}/>
-    </Routes>
-  </Router>
+    <Router>
+      <Routes>
+        <Route path='/addpackage' element={<Addpackage />} />
+        <Route path='/' element={<App />} />
+        <Route path='/packages' element={<Packages />}>
+        </Route>
+        <Route path='/packages-orders' element={<PackagesOrders />} />
+        <Route path='/orders' element={<Orders />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/photographers' element={<Photographers />} />
+        <Route path='/products' element={<Products />} />
+      </Routes>
+    </Router>
   </Provider>
 );
 

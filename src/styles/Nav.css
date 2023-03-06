@@ -1,38 +1,44 @@
 .Nav {
-  width: 180px;
-  padding: 20px;
+  width: 200px;
+  padding: 5px;
+  padding-right: 30px;
+  background: linear-gradient(135deg, #1a2d6d 0%, #0c1534 100%);
+  border-right: 5px solid rgb(255, 200, 0);
+  color: white !important;
+  min-height: 745px;
 }
 
 .Nav .logo {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
-.Nav .logo span {
-  margin-left: 10px;
+.Nav .logo img {
+  width: 200px;
+  margin-left: -10px;
 }
 
 .Nav .list {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
 }
 
 .Nav .list ul li {
-  list-style-type: none;
-  margin-left: -40px;
-  width: 100px;
-  transition: 0.3ms;
-  padding: 20px;
-  border-radius: 12px;
+  color: white !important;
+  padding-left: 7px;
+  margin-bottom: 25px;
+  border-bottom: 2px rgba(255, 255, 255, 0) solid;
+  width: 120px;
+  cursor: pointer;
 }
 
 .Nav .list ul li:hover {
-  color: #fff;
-  background-color: #49BEB7;
+  color: rgb(255, 200, 0) !important;
 }
 
-.Nav .list h3 {
-  padding-top: 400px;
-  color: gray;
+.Nav .list ul {
+  padding-left: 10px;
 }
