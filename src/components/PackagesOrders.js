@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
 import Nav from './Nav';
 import '../styles/packagesOrders.css'
 
@@ -12,7 +12,7 @@ function PackagesOrders() {
   }, []);
 
   async function getAllPackageOrders() {
-    const url = 'https://sophisticated-steel-production.up.railway.app/package/order';
+    const url = 'http://localhost:4005/package/order';
     const ordersData = await axios.get(url);
     const orders = ordersData.data;
     setOrders(orders);
@@ -34,7 +34,6 @@ function PackagesOrders() {
               <th>Notes</th>
               <th>Medical Issues</th>
               <th>Special Food</th>
-              <th>Total Price</th>
             </tr>
           </thead>
           <tbody>
@@ -47,7 +46,6 @@ function PackagesOrders() {
                 <td>{user.notes}</td>
                 <td>{user.medicalIssues}</td>
                 <td>{user.specialFood}</td>
-                <td>{Math.floor(Math.random() * 501)}.0 JD</td>
               </tr>
             ))}
           </tbody>

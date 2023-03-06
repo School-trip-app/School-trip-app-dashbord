@@ -5,7 +5,7 @@ import axios from 'axios';
 function Orders() {
   let [orders, setOrders] = useState([]);
   const handlerOrder = async () => {
-    await axios.get('https://sophisticated-steel-production.up.railway.app/user').then((res) => {
+    await axios.get('http://localhost:4005/user').then((res) => {
       setOrders(res.data);
     }).catch(err => console.log(err));
 

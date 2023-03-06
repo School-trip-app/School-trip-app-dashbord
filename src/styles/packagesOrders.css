@@ -1,7 +1,7 @@
 .packages-orders {
   display: flex;
   min-height: 650px;
-  flex-flow: row wrap;
+
 }
 
 .packages-orders-content {

@@ -10,7 +10,7 @@ function Packages() {
   const [packages, setPackages] = useState([]);
 
   const getPackages = async () => {
-    await axios.get(`https://sophisticated-steel-production.up.railway.app/package`).then(res => {
+    await axios.get(`http://localhost:4005/package`).then(res => {
       setPackages(res.data);
       console.log(res.data)
     }).catch(error => {
@@ -21,7 +21,7 @@ function Packages() {
 
   }
   const handlerDelete = async (id) => {
-    await axios.delete(`https://sophisticated-steel-production.up.railway.app/package/${id}`).then(() => {
+    await axios.delete(`http://localhost:4005/package/${id}`).then(() => {
       getPackages();
     }).catch(error => {
       console.log(error);
